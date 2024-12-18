@@ -2,20 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Darker+Grotesque:wght@300..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --yellowColor: #e8c83e;
+  --bodyColor: #032628;
+  --textColor: #0a0a0a;
+  /* --dmSans: "DM Sans", sans-serif; */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --background: #0a0a0a;
+    --foreground: #ededed; */
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--textColor);
+  background: var(--bodyColor);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.active {
+  color: brown;
+}
+.hello {
+  display: inline-block;
+  animation: hello 6s linear infinite;
+}
+
+@keyframes hello {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.dmSans {
+  font-family: "DM Sans", sans-serif;
+}
+.slick-next::before,
+.slick-prev::before {
+  display: none; /* Hide the default small arrow icon */
 }
